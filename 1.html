@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            COLLEGE WEBSITE
+        </title>
+        
+        <style>
+
+
+            header{display: flex;align-items:center;justify-content: space-between;}
+
+           
+            .image-container {
+    position: relative;
+    width: 100%;
+   
+    overflow: hidden;
+}
+
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+
+.overlay-text {
+     color: #bb2020;
+     background-color: white;
+     font-weight: bolder;
+     font-style: italic;
+     font-family: 'Times New Roman', Times, serif;
+    font-size: xxx-large;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.5s;
+    transform: scale(0.8);
+}
+
+
+.image-container:hover .image-overlay {
+    opacity: 1;
+}
+
+
+.image-container:hover .overlay-text {
+    transform: scale(1);
+}
+            header h1{align-self: center;font-size:xxx-large;font-family: 'Times New Roman', Times, serif ;color:crimson;font-style:normal; text-align: center;}
+
+            header{background-color:lightgray;}
+
+            header a{align-self:flex-end;color: blue;font-size:large;padding: 15px;font-weight: bold; }
+
+            body { background-image: url('./q1.jpg'); background-size:cover; background-repeat: no-repeat; }
+
+            blockquote{ color:black; text-align: justify; font-family:Verdana, Geneva, Tahoma, sans-serif;font-size: larger;}
+
+            marquee{color:white;font-size: xxx-large;background-color:purple;}
+
+            img{align-self:flex-start;}
+
+            p{text-align:justify;font-size:larger; font-family:Verdana, Geneva, Tahoma, sans-serif;}
+
+            h1{color:red;font-family:Verdana, Geneva, Tahoma, sans-serif;text-align: left;}
+
+            h2{color:darkgreen;font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: xx-large;}
+
+            ol.a{ font-size:x-large;font-style:initial;text-align:justify; color: navy;}
+
+            ol.b{font-size:x-large;font-style:initial;text-align:justify; color: navy;}
+
+            ul.ap{font-size:x-large;text-align: justify;color:rgb(2, 56, 2);}
+
+            .slideshow-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+
+
+        .slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+.mySlides {
+    display: none;
+    text-align: center;
+}
+
+.mySlides img {
+    width:100%;
+}
+
+.mySlides h3 {
+    margin: 20px 0;
+}
+
+
+.prev, .next {
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%);
+    cursor: pointer;
+    padding: 16px;
+    color: white; background-color: black;
+    font-weight: bold;
+    font-size: 20px;
+    user-select: none;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+         div h3{text-align: center; color:white;font-size: xxx-large;background-color:black;}
+
+
+            footer {
+            background-color:lightgrey;color:black; padding: 20px 0;}
+
+        .footer-column {
+            text-align: center;
+            display: inline-block;
+            vertical-align: top;
+            width: 30%; 
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+
+        footer a {
+            color:black;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+        </style>
+
+
+
+        <style>
+          body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color:beige;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+}
+
+        input[type="text"],
+        select,
+        input[type="date"] {
+           width: 100%;
+           padding: 8px;
+           margin-bottom: 20px;
+           border: 1px solid #ccc;
+           border-radius: 4px;
+}
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        textarea {
+            height: 150px;
+        }
+
+        input[type="submit"]
+         {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover 
+        {
+            background-color: #0056b3;
+        }
+
+        input[type="reset"] 
+        {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="reset"]:hover
+         {
+            background-color: #0056b3;
+        }
+        h4{text-align: center;font-size: larger;}
+        </style>
+    </head>
+    <body>
+
+        <header>
+            <img src="pic12.png" width="250">
+            <h1>NM COLLEGE OF ARTS AND SCIENCE</h1>
+            <a href="1.html">HOME</a>
+            <a href="1.html">ABOUT </a>
+            <a href="1.html">CAMPUS</a>
+            <a href="1.html">INNOVATION</a>
+            <a href="1.html">ADMISSION</a>
+        </header>
+
+                <marquee align-self="left">WELCOME TO NM COLLEGE OF ARTS AND SCIENCE</marquee>
+
+                <div class="image-container">
+                    <div class="image-overlay">
+                        <div class="overlay-text">COLLEGE CAMPUS</div>
+                    </div>
+                    <img src="red-buildings-households.jpg" alt="College Campus">
+                </div>
+                
+                <blockquote>A student should be a light to illuminate the world with education, making use of all the talents and opportunities.<br><br>
+                                    At NM College and Technology, we are all about your success and growth. Our college is a place where you
+                                    can discover your passions,develop your skills, and prepare for a bright future.Our dedicated faculty and staff 
+                                    are here to support you every step of the way. Whether you're pursuing a degree, seeking career training, or
+                                    expanding your knowledge, we have programs and resources to help you achieve your goals.We take pride in our diverse and inclusive community,
+                                    where you'll meet people from all walks of life. It's a place to make lifelong friends and connections.At NM College and Technology,
+                                    we believe that education should be accessible to all. We offer financial aid options and scholarships to help make your education affordable.
+                                    Explore our website to learn more about our programs, campus life, and how you can join our NM College and Technology family. We look forward to helping 
+                                    you write the next chapter of your educational journey.
+                </blockquote>
+                
+                  <main>
+                    <h1>VISION AND MISSION</h1>
+                    <p>Our vision is to be a place where students can dream big, learn, 
+                    and grow into successful individuals who make a positive impact on the world."
+                    <br><br>
+                    "Our mission is to provide quality education, foster a supportive learning environment,
+                     and prepare students with the knowledge and skills they need for a bright future."
+
+                    </p>
+
+                  </main>
+                  <div class="slideshow-container">
+                    <div class="slide-container">
+                    <div class="mySlides fade">
+                        <img src="./classroom.avif" style="width:100%">
+                        <h3>CLASSROOM</h3>
+                    </div>
+                    </div>
+
+                
+                    
+
+                    <div class="mySlides fade">
+                        
+                        <img src="./play.avif" style="width:100%">
+                        <h3>PLAYGROUND</h3>
+                    </div>
+                
+            
+                    <div class="mySlides fade">
+                      
+                        <img src="./lib.avif" style="width:100%">
+                        <h3>LIBRARY</h3>
+                    </div>
+                   
+
+                    <div class="mySlides fade">
+                        <img src="./auditorium.avif"  style="width:100%">
+                        <h3>AUDITORIUM</h3>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <img src="./slide2.avif" style="width:100%">
+                       <h3>TEACHING</h3>
+                    </div>
+            
+                    
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            
+               
+                <script>
+                    var slideIndex = 1;
+                    showSlides(slideIndex);
+            
+                    function plusSlides(n) {
+                        showSlides(slideIndex += n);
+                    }
+            
+                    function currentSlide(n) {
+                        showSlides(slideIndex = n);
+                    }
+            
+                    function showSlides(n) {
+                        var i;
+                        var slides = document.getElementsByClassName("mySlides");
+                        var dots = document.getElementsByClassName("dot");
+                        if (n > slides.length) { slideIndex = 1 }
+                        if (n < 1) { slideIndex = slides.length }
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                        }
+                        for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" active", "");
+                        }
+                        slides[slideIndex - 1].style.display = "block";
+                        dots[slideIndex - 1].className += " active";
+                    }
+                </script>
+                <br>
+                <br>
+
+                  
+                  <h1>COURSES OFFERED</h1>
+                  <h2>PG COURSES</h2>
+                  <ol class="a" >
+                    <li>Bachelor of Arts (BA) in English</li>
+                    <li>Bachelor of Science (BSc) in Computer Science</li>
+                    <li>Bachelor of Business Administration (BBA)</li>
+                    <li>Bachelor of Science in Nursing (BSN)</li>
+                    <li>Bachelor of Fine Arts (BFA) in Visual Arts</li>
+                    <li>Bachelor of Laws (LLB)</li>
+                    <li>Bachelor of Education (B.Ed)</li>
+                  </ol>
+                  <h2>UG COURSES</h2>
+                  <ol class="b" >
+                    <li>Master of Business Administration (MBA)</li>
+                    <li>Master of Science (MSc) in Data Science</li>
+                    <li>Master of Arts (MA) in Psychology</li>
+                    <li>Master of Public Health (MPH)</li>
+                    <li>Master of Computer Applications (MCA)</li>
+                    <li>Master of Laws (LLB)</li>
+                    <li>Master of Education (B.Ed)</li>
+                    <li>Master of Fine Arts (MFA) in Creative Writing</li>
+                    <li>Master of Social Work (MSW)</li>
+                  </ol>
+                  <br>
+
+                    <h1>ADMISSION PROCEDURE</h1>
+                    <ul class="ap">
+                      <li> All admissions into the College are made as per the guidelines of Bharathiar University and Tamil Nadu State Government.</li>
+                      <li>Application for admission into the College should be submitted only in the prescribed form available in the college office.</li>
+                      <li> Normally, admissions are done only once in the beginning of the academic year.</li>
+                      <li>Details regarding eligibility for admission, documents to be submitted, fees to be paid etc., are given in the prospectus issued along with the Application form.</li>
+                      <li>Any candidate who is found to have obtained admission by false representation will be summarily dismissed in future.</li>
+                      <li>If the student is absent without a valid reason and leave letter for more
+                        than five days continuously from the date of admission or reopening of the College whichever is later, the student’s name will be removed from the register.</li>
+                      <li> If a student leaves the College in the middle of any semester, she cannot
+                        claim remission of any portion of the fees.</li>
+                      <li>Students who have completed their course of studies, can get their
+                        Transfer and Conduct Certificates after clearing the dues to the     
+                        Laboratories and Library submitting written application to the Principal.</li>
+                      <li>If a student leaves the College at the end of an academic year, she can
+                        receive the Attendance Certificate required by the University if she applies for it.</li>
+                    </ul>
+                    <br><br><br><br><br>
+          
+                    <div class="container">
+                      <h1>Application Form</h1>
+                      <form action="process_form.php" method="post">
+                          <label for="fname">First Name:</label>
+                          <input type="text" id="fname" name="fname" required>
+              
+                          <form action="process_form.php" method="post">
+                              <label for="lname"> Last Name:</label>
+                              <input type="text" id="lname" name="lname" required>
+              
+                              <label for="gender">Gender:</label>
+                      <select id="gender" name="gender" required>
+                          <option value=""></option>
+                          <option value="male">Male</option>
+                          <option value="female">Female</option>
+                          <option value="other">Other</option>
+                      </select><br><br>
+              
+                      <label for="dob">Date of Birth:</label>
+                      <input type="date" id="dob" name="dob" required><br><br>
+                  
+              
+                          <label for="email">Email:</label>
+                          <input type="email" id="email" name="email" required>
+              
+                          <label for="course">Select Course:</label>
+                      <select id="course" name="course" required>
+                        <option value="">...</option>
+                          <option value="Bachelor of Arts (BA) in English">Bachelor of Arts (BA) in English</option>
+                          <option value="Bachelor of Science (BSc) in Computer Science">Bachelor of Science (BSc) in Computer Science</option>
+                          <option value="Bachelor of Business Administration (BBA)">Bachelor of Business Administration (BBA)</option>
+                          <option value="Bachelor of Laws (LLB)">Bachelor of Laws (LLB)</option>
+                          <option value="Bachelor of Education (B.Ed)">Bachelor of Education (B.Ed)</option>
+              
+                          <option value="Master of Business Administration (MBA)">Master of Business Administration (MBA)</option>
+                          <option value="Master of Science (MSc) in Data Science">Master of Science (MSc) in Data Science</option>
+                          <option value="Master of Arts (MA) in Psychology">Master of Arts (MA) in Psychology</option>
+                          <option value="Master of Computer Applications (MCA)">Master of Computer Applications (MCA)</option>
+                          <option value="Master of Laws (LLB)">Master of Laws (LLB)</option>
+                          <option value="Master of Fine Arts (MFA) in Creative Writing">Master of Fine Arts (MFA) in Creative Writing</option>
+            
+                          <input type="submit" value="Submit">
+              
+                          <input type="reset" value="Reset">
+                      </form>
+                  </div>
+                </main>
+                <br><br><br><br><br>
+
+                
+                  <script>
+                    
+                    function validateForm() {
+                        var fname = document.getElementById("fname").value;
+                        var email = document.getElementById("email").value;
+                
+                        
+                        if (fname.trim() === "") {
+                            alert("First Name is required.");
+                            return false;
+                        }
+                
+                        
+                        var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+                        if (!email.match(emailPattern)) {
+                            alert("Please enter a valid email address.");
+                            return false;
+                        }
+                
+                        
+                
+                        return true; 
+                    }
+                
+                   
+                    document.getElementById("applicationForm").onsubmit = validateForm;
+                </script>
+
+<footer>
+                  
+    <div class="footer-column">
+      <img src="pic12.png" width="30%">
+      <p>NM COLLEGE OF ARTS AND SCIENCE</p>
+      <p>Address: <br>
+         123 College Street, <br>
+         Coimbatore, <br>
+         Tamil Nadu <br>
+         Pin-code:6400048 <br>
+        </p>
+  </div>
+          
+                  <div class="footer-column">
+                    <br><br><br><br><br> <br><br>
+                      <p>Follow us on:</p>
+                      <p><a href="#"><img src="facebook.png" width="5%">Facebook</a></p>
+                      <p><a href="#"><img src="twitter.png" width="5%">Twitter</a></p>
+                      <p><a href="#"><img src="insta.jpg" width="5%">Instagram</a></p>
+                  </div>
+
+                  <div class="footer-column">
+                    <br><br><br><br><br> <br><br>
+                    <p><img src="ph.jpg" width="5%">Phone: (123) 456-7890</p>
+                    <p><img src="mail.jpg" width="5%">Email: nm@college.edu</p>
+                    
+                </div>
+                <div class="footer-bottom">
+                    
+                  <h4>&copy;RESHMA EMERALD HEIGHTS COLLEGE FOR WOMEN
+             </h4>
+                </div>
+              </footer>
+    </body>
+</html>
